@@ -1,1 +1,1 @@
-export type LinkStyle = 'markdown' | 'wiki';
+export type LinkStyle = 'markdown' | 'wiki' | null;

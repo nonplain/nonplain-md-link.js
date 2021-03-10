@@ -63,6 +63,11 @@ describe('Link', () => {
       const expectedWikiLinkStyles = new Array(wikiLinks.length).fill('wiki');
       expect(wikiLinkStyles).toEqual(expectedWikiLinkStyles);
     });
+
+    test('returns null on invalid link', () => {
+      const result = Link.detectLinkStyle('not a link');
+      expect(result).toEqual(null);
+    });
   });
 
   describe('composeHTML', () => {

@@ -38,12 +38,18 @@ export default class Link {
   }
 
   static detectLinkStyle(content: string): LinkStyle {
+    let style = null;
+
     if (regex.links.wiki.whole.test(content)) {
       regex.links.wiki.whole.lastIndex = 0;
-      return 'wiki';
+      style = 'wiki';
+    } else if (regex.links.markdown.whole.test(content)) {
+      regex.links.markdown.whole.lastIndex = 0;
+      style = 'markdown';
     }
 
-    return 'markdown';
+    /* @ts-ignore */
+    return style;
   }
 
   composeHTML(attributesStr?: string): string {
