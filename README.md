@@ -6,13 +6,13 @@ Tools for markdown links in [nonplain files](https://github.com/jaredgorski/nonp
 
 Markdown files often contain markdown-style links, which look like this:
 
-```md
+```
 [link inner text](/path/to/some/file/or/site)
 ```
 
 They can also sometimes contain wiki-style links when used for notetaking. Wiki-style links look like this:
 
-```md
+```
 [[/path/to/some/file/or/site]]
 ```
 
@@ -31,7 +31,7 @@ Once these links are gathered, they can be analyzed and selectively edited to ac
 
 ### Initialization
 
-To parse a link, pass it to the `Link` class upon initialization:
+To parse a link, pass it as a string to the `Link` class upon initialization:
 
 ```js
 const { Link } = require("nonplain-md-link");
@@ -66,7 +66,7 @@ Once a link is parsed, its contents can be used to construct new links.
 
 ### Link.collectAllLinksFromContent()
 
-Returns `Link` instances for all markdown and wiki-style links from a given string.
+Returns `Link` instances for all markdown and wiki-style links within a given string.
 
 ### Link.detectLinkStyle()
 
@@ -148,6 +148,14 @@ console.log(link.composeWiki());
 // Output:
 //
 // '[[/path/to/file.md]]'
+```
+
+## Regex
+
+This library exports an object containing useful [regex patterns for parsing nonplain files](https://github.com/jaredgorski/nonplain.js/blob/master/src/utils/regex/index.ts) as well as [extracting markdown and wiki-style links](https://github.com/jaredgorski/nonplain-md-link.js/blob/master/src/utils/regex/index.ts) from string content. To use these patterns, import `regex` from this package:
+
+```js
+const { regex } = require("nonplain-md-link");
 ```
 
 ## Related work
