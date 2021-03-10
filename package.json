@@ -1,6 +1,6 @@
 {
   "name": "nonplain-md-link",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Tools for markdown links in nonplain files",
   "homepage": "https://github.com/jaredgorski/nonplain-md-link.js#readme",
   "repository": "github:jaredgorski/nonplain-md-link.js",
