@@ -45,4 +45,17 @@ export default class Link {
 
     return 'markdown';
   }
+
+  composeHTML(attributesStr?: string): string {
+    const attributes = attributesStr ? ` ${attributesStr}` : '';
+    return `<a href="${this.path}"${attributes}>${this.innerText}</a>`;
+  }
+
+  composeMarkdown(): string {
+    return `[${this.innerText}](${this.path})`;
+  }
+
+  composeWiki(): string {
+    return `[[${this.path}]]`;
+  }
 }

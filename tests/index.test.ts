@@ -64,4 +64,39 @@ describe('Link', () => {
       expect(wikiLinkStyles).toEqual(expectedWikiLinkStyles);
     });
   });
+
+  describe('composeHTML', () => {
+    const link = new Link(mdLinks[0]);
+
+    test('composes an HTML-style link string from a Link instance', () => {
+      const htmlLink = link.composeHTML();
+      const expected = `<a href="${link.path}">${link.innerText}</a>`;
+      expect(htmlLink).toEqual(expected);
+    });
+
+    test('composes an HTML-style link string with attributes from a Link instance', () => {
+      const attributesStr = 'target="_blank" rel="noreferrer"';
+      const htmlLink = link.composeHTML(attributesStr);
+      const expected = `<a href="${link.path}" ${attributesStr}>${link.innerText}</a>`;
+      expect(htmlLink).toEqual(expected);
+    });
+  });
+
+  describe('composeMarkdown', () => {
+    test('composes a markdown-style link string from a Link instance', () => {
+      const link = new Link(mdLinks[0]);
+      const markdownLink = link.composeMarkdown();
+      const expected = `[${link.innerText}](${link.path})`;
+      expect(markdownLink).toEqual(expected);
+    });
+  });
+
+  describe('composeWiki', () => {
+    test('composes a wiki-style link string from a Link instance', () => {
+      const link = new Link(mdLinks[0]);
+      const wikiLink = link.composeWiki();
+      const expected = `[[${link.path}]]`;
+      expect(wikiLink).toEqual(expected);
+    });
+  });
 });
