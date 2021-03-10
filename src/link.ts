@@ -5,21 +5,18 @@ import { LinkStyle } from './types';
 export default class Link {
   initialStyle: LinkStyle;
 
-  style: LinkStyle;
-
   path: string;
 
   innerText: string;
 
   constructor(content: string) {
     this.initialStyle = Link.detectLinkStyle(content);
-    this.style = this.initialStyle;
 
     if (!content) {
       throw new Error('Error: content not provided.');
     }
 
-    switch (this.style) {
+    switch (this.initialStyle) {
       case 'wiki':
         [this.path] = content.match(regex.links.wiki.innerText);
         [this.innerText] = content.match(regex.links.wiki.innerText);
