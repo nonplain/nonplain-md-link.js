@@ -47,7 +47,6 @@ console.log(markdownLink);
 //   "initialStyle": "markdown",
 //   "innerText": "my markdown link",
 //   "path": "/path/to/file.md",
-//   "style": "markdown",
 // }
 
 console.log(wikiLink);
@@ -58,7 +57,6 @@ console.log(wikiLink);
 //   "initialStyle": "wiki",
 //   "innerText": "/path/to/file.md",
 //   "path": "/path/to/file.md",
-//   "style": "wiki",
 // }
 ```
 
