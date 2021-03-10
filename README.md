@@ -117,7 +117,7 @@ console.log(link.composeHTML(externalLinkAttributes));
 ### Link.prototype.composeMarkdown()
 
 ```js
-link.composeMarkdown([attributesStr])
+link.composeMarkdown()
 ```
 
 Returns a markdown link based on the current `Link` instance.
@@ -135,7 +135,7 @@ console.log(link.composeMarkdown());
 ### Link.prototype.composeWiki()
 
 ```js
-link.composeWiki([attributesStr])
+link.composeWiki()
 ```
 
 Returns a wiki-style link based on the current `Link` instance.
