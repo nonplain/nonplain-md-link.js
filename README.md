@@ -66,6 +66,39 @@ Once a link is parsed, its contents can be used to construct new links.
 
 Returns `Link` instances for all markdown and wiki-style links within a given string.
 
+```js
+const { File } = require("nonplain");
+const { Link } = require("nonplain-md-link");
+
+(async () => {
+  const file = new File().load('/path/to/file.md');
+  
+  const linksInFileBody = Link.collectAllLinksFromContent(file.body);
+  
+  console.log(linksInFileBody);
+})();
+
+// Output:
+//
+// [
+//   {
+//     "initialStyle": "markdown",
+//     "innerText": "as discussed in class",
+//     "path": "../notes/CS231n notes.md"
+//   },
+//   {
+//     "initialStyle": "markdown",
+//     "innerText": "descending the loss gradient",
+//     "path": "https://en.wikipedia.org/wiki/Gradient_descent"
+//   },
+//   {
+//     "initialStyle": "wiki",
+//     "innerText": "How to backpropagate",
+//     "path": "How to backpropagate"
+//   }
+// ]
+```
+
 ### Link.detectLinkStyle()
 
 Returns the link style (`'markdown'` or `'wiki'`) of a provided string.
@@ -150,7 +183,7 @@ console.log(link.composeWiki());
 
 ## Regex
 
-This library exports an object containing useful [regex patterns for parsing nonplain files](https://github.com/jaredgorski/nonplain.js/blob/master/src/utils/regex/index.ts) as well as [extracting markdown and wiki-style links](https://github.com/jaredgorski/nonplain-md-link.js/blob/master/src/utils/regex/index.ts) from string content. To use these patterns, import `regex` from this package:
+This library exports an object containing useful [regex patterns for extracting markdown and wiki-style links](https://github.com/jaredgorski/nonplain-md-link.js/blob/master/src/utils/regex/index.ts) from string content. To use these patterns, import `regex` from this package:
 
 ```js
 const { regex } = require("nonplain-md-link");
