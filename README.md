@@ -71,7 +71,7 @@ const { File } = require("nonplain");
 const { Link } = require("nonplain-md-link");
 
 (async () => {
-  const file = new File().load('/path/to/file.md');
+  const file = await new File().load('/path/to/file.md');
   
   const linksInFileBody = Link.collectAllLinksFromContent(file.body);
   
