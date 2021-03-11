@@ -1,11 +1,7 @@
 /* eslint-disable */
 
 /* @ts-ignore */
-import fs from 'fs';
-/* @ts-ignore */
-import os from 'os';
-/* @ts-ignore */
-import path, { ParsedPath } from 'path';
+import path from 'path';
 import { Files, FileData } from 'nonplain';
 
 import { Link } from '../dist';
