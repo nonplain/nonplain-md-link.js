@@ -1,6 +1,6 @@
 # nonplain-md-link
 
-Tools for markdown links in [nonplain files](https://github.com/jaredgorski/nonplain.js#what-a-nonplain-file-is).
+Tools for markdown links in [nonplain files](https://github.com/nonplain/nonplain.js#what-a-nonplain-file-is).
 
 ## What this library does
 
@@ -16,7 +16,7 @@ They can also sometimes contain wiki-style links when used for notetaking. Wiki-
 [[/path/to/some/file/or/site]]
 ```
 
-The concept: provide a tool for gathering and working with markdown and wiki-style links within [nonplain](https://github.com/jaredgorski/nonplain.js) files.
+The concept: provide a tool for gathering and working with markdown and wiki-style links within [nonplain](https://github.com/nonplain/nonplain.js) files.
 
 Once these links are gathered, they can be analyzed and selectively edited to accomplish various goals such as:
 
@@ -183,7 +183,7 @@ console.log(link.composeWiki());
 
 ## Regex
 
-This library exports an object containing useful [regex patterns for extracting markdown and wiki-style links](https://github.com/jaredgorski/nonplain-md-link.js/blob/master/src/utils/regex/index.ts) from string content. To use these patterns, import `regex` from this package:
+This library exports an object containing useful [regex patterns for extracting markdown and wiki-style links](https://github.com/nonplain/nonplain-md-link.js/blob/master/src/utils/regex/index.ts) from string content. To use these patterns, import `regex` from this package:
 
 ```js
 const { regex } = require("nonplain-md-link");
@@ -191,7 +191,7 @@ const { regex } = require("nonplain-md-link");
 
 ## Related work
 
-- Core nonplain library for JS: [nonplain.js](https://github.com/jaredgorski/nonplain.js)
+- Core nonplain library for JS: [nonplain.js](https://github.com/nonplain/nonplain.js)
 
 ## Contributing
 
