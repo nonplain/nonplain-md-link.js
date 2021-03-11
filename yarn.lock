@@ -3242,10 +3242,10 @@ node-releases@^1.1.70:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.71.tgz#cb1334b179896b1c89ecfdd4b725fb7bbdfc7dbb"
   integrity sha512-zR6HoT6LrLCRBwukmrVbHv0EpEQjksO6GmFcZQQuCAy139BEsoVKPYnf3jongYW83fAa1torLGYwxxky/p28sg==
 
-nonplain@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/nonplain/-/nonplain-0.0.3.tgz#dbdc9a5aaf11ebfab1e563ce36c64349bda69f6c"
-  integrity sha512-V2aXDMCfvRuu/eRPdxn9WNtK0r5KGIyfS1eSjLMG/SemehHgCdKcbZhAOtKdnZsrYLftc6Y3kO4msVgpRG7dIw==
+nonplain@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/nonplain/-/nonplain-0.0.4.tgz#c5ffca92bae2cdc9b9a2bae67216cae5ee1fd481"
+  integrity sha512-Itq77JWAh8yOP62ASbvqGMnjpv6V+3+BCJjC9RhhrEHD7Ao9sG3OJo/WvEYu7SqKxA4gzTd1YJntRsgkvQ3nXQ==
   dependencies:
     glob "^7.1.6"
     js-yaml "^3.14.1"

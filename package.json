@@ -21,7 +21,7 @@
     "pub": "yarn test && yarn publish && git push origin master"
   },
   "dependencies": {
-    "nonplain": "^0.0.3"
+    "nonplain": "^0.0.4"
   },
   "devDependencies": {
     "@tsconfig/node14": "^1.0.0",
