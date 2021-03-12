@@ -192,6 +192,7 @@ const { regex } = require("nonplain-md-link");
 ## Related work
 
 - Core nonplain library for JS: [nonplain.js](https://github.com/nonplain/nonplain.js)
+- Generate backlinks for nonplain files: [nonplain-md-backlinker.js](nonplain-md-backlinker.js)
 
 ## Contributing
 
