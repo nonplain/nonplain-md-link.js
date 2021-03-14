@@ -2,7 +2,7 @@
 
 /* @ts-ignore */
 import path from 'path';
-import { Files, FileData } from 'nonplain';
+import Files, { FileData } from 'nonplain';
 
 import { Link } from '../dist';
 
@@ -34,9 +34,9 @@ describe('Link', () => {
   });
 
   describe('collectAllLinksFromContent', () => {
-    test('extracts all links from markdown body and returns an array of Link instances', async () => {
+    test('extracts all links from markdown body and returns an array of Link instances', () => {
       const glob = path.join(__dirname, './fixtures/files/src/**/*.md');
-      const files = await new Files().load(glob);
+      const files = new Files().load(glob);
 
       const allFileLinks = files.map(({ body }: FileData) => Link.collectAllLinksFromContent(body));
       const expectedAllFileLinks = [

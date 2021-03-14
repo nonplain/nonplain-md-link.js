@@ -70,13 +70,11 @@ Returns `Link` instances for all markdown and wiki-style links within a given st
 const { File } = require("nonplain");
 const { Link } = require("nonplain-md-link");
 
-(async () => {
-  const file = await new File().load('/path/to/file.md');
-  
-  const linksInFileBody = Link.collectAllLinksFromContent(file.body);
-  
-  console.log(linksInFileBody);
-})();
+const file = new File().load('/path/to/file.md');
+
+const linksInFileBody = Link.collectAllLinksFromContent(file.body);
+
+console.log(linksInFileBody);
 
 // Output:
 //
