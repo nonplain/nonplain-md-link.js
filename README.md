@@ -34,7 +34,7 @@ Once these links are gathered, they can be analyzed and selectively edited to ac
 To parse a link, pass it as a string to the `Link` class upon initialization:
 
 ```js
-const { Link } = require("nonplain-md-link");
+const Link = require("nonplain-md-link").default;
 
 const markdownLink = new Link('[my markdown link](/path/to/file.md)');
 const wikiLink = new Link('[[/path/to/file.md]]');
@@ -67,8 +67,8 @@ Once a link is parsed, its contents can be used to construct new links.
 Returns `Link` instances for all markdown and wiki-style links within a given string.
 
 ```js
+const Link = require("nonplain-md-link").default;
 const { File } = require("nonplain");
-const { Link } = require("nonplain-md-link");
 
 const file = new File().load('/path/to/file.md');
 

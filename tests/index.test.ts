@@ -4,7 +4,7 @@
 import path from 'path';
 import Files, { FileData } from 'nonplain';
 
-import { Link } from '../dist';
+import Link from '../dist';
 
 import {
   testFile1Links as expectedTestFile1Links,

@@ -1,6 +1,6 @@
 import { regex as npRegex } from 'nonplain';
 
-const links = {
+export const links = {
   all: /(\[[^\[\]]*\]\([^\(\)]*\)|\[\[[^\[\]]*\]\])/g,
   markdown: {
     whole: /\[[^\[\]]*\]\([^\(\)]*\)/g,
@@ -13,9 +13,7 @@ const links = {
   },
 };
 
-const regex = {
+export const regex = {
   ...npRegex,
   links,
 };
-
-export default regex;

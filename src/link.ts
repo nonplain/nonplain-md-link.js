@@ -1,4 +1,4 @@
-import regex from './utils/regex';
+import { regex } from './utils/regex';
 
 import { LinkStyle } from './types';
 
