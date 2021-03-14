@@ -24,7 +24,7 @@ export const wikiLinks = [
   },
   {
     initialStyle: 'wiki',
-    innerText: '/test/link2/path',
+    innerText: 'test link 2 innerText',
     path: '/test/link2/path',
   },
   {

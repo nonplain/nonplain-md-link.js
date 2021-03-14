@@ -18,7 +18,7 @@ export default class Link {
 
     switch (this.initialStyle) {
       case 'wiki':
-        [this.path] = content.match(regex.links.wiki.innerText);
+        [this.path] = content.match(regex.links.wiki.path);
         [this.innerText] = content.match(regex.links.wiki.innerText);
         break;
       case 'markdown':
